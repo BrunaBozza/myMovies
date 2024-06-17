@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+  --primary-color: #29335c;
+  --ligth-primary: #3f4f8d;
+  --ligthest-color: #e9ebd5;
+  --secondary-color: #774936;
+  --ligth-secondary: #b97e64;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+  flex-grow: 1;
+  background-color: var(--ligthest-color);
+  color: #29335c;
+  padding: 2rem 0;;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--ligthest-color);
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: flex-end;
+  margin-right: 10%;
+  gap: 2%;
+}
+
+.movie-name-wrapper {
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.movie-year-wrapper {
+  align-items: center;
+}
+
+.movie-year-wrapper > input {
+  max-width: 5rem;
+  width: 200px;
+}
+
+.movie-name-wrapper > input {
+  width: 100%;
+}
+
+.movie-name-wrapper > input,
+.movie-year-wrapper > input {
+  margin: 0 0.5rem;
+  border-radius: 7px;
+  padding: 0.3rem 0.2rem;
+  border: none;
+}
+
+.movie-name-wrapper > label,
+.movie-year-wrapper > label {
+  font-weight: bold;
+}
+
+#search-button {
+  width: 5px;
+  height: 5px;
+  all: unset;
+  padding: 0.3rem;
+  border: 2px solid var(--ligthest-color);
+  border-radius: 10px;
+}
+
+#search-button:focus,
+#search-button:hover {
+  background-color: var(--ligth-primary);
+}
+
+#movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#movie-list article {
+  display: flex;
+  flex-flow: column;
+}
+
+#movie-list article > img {
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  height: 100%;
+}
+
+.remove-button {
+  border: 3px solid var(--secondary-color);
+  padding: 0.3rem 0;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px #00000070;
+  color: var(--secondary-color);
+}
+
+.remove-button:focus,
+.remove-button:hover {
+  background-color: var(--ligth-secondary);
+  color: var(--ligthest-color);
+}
